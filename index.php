@@ -96,7 +96,7 @@ if($method == 'POST'){
 	$clientResponse = curl_exec($client);
 
 	$response = new \stdClass();
-	$response->speech = "This is your link.  Please log into Codex to find out the details of your search.";
+	$response->speech = "This is your link.  Please log into Codex to find out the details of your search." . $clientResponse;
 	$response->displayText = "This is your link. " . $linkAddr . ". Please log into Codex to find out the details of your search.";
 	$response->source = "Webhook for Dialog Codex";
 	echo json_encode($response);
