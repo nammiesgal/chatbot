@@ -98,6 +98,7 @@ if($method == 'POST'){
 	$response = new \stdClass();
 	$response->speech = "This is your link: " . $linkAddr . " Please log into Codex to find out the details of your search.";
 	$response->displayText = "This is your link: " . $linkAddr . " Please log into Codex to find out the details of your search.";
+	$response->url = $linkAddr;
 	$response->source = "Webhook for Dialog Codex";
 	echo json_encode($response);
 }
