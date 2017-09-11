@@ -96,6 +96,7 @@ if($method == 'POST'){
 	$clientResponse = curl_exec($client);
 
 	$response = new \stdClass();
+	$response->textToSpeech = "This is your link: Please log into Codex to find out the details of your search.";
 	$response->speech = "This is your link: \\n" . $linkAddr . " \\nPlease log into Codex to find out the details of your search.";
 	$response->displayText = "This is your link: \\n" . $linkAddr . " \\nPlease log into Codex to find out the details of your search.";
 	$response->url = "Link " . $linkAddr;
