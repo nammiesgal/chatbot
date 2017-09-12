@@ -95,12 +95,54 @@ if($method == 'POST'){
 	//get response from resource
 	$clientResponse = curl_exec($client);
 
+	$messages=[];
+	// Building Card
+	array_push($messages, array(
+		"type"=> "basicCard",
+	//	"platform"=> "google",
+		"title"=> "Dialog Codex Search Link",
+	//	"subtitle"=> "card subtitle",
+		"image"=>[
+		  "url"=>$linkAddr,
+		  "accessibility_text"=>'image-alt'
+		  ],
+		  "formattedText"=> 'This is your link: Please log into Dialog Codex to find out the details of your search.',
+		  "buttons"=> [
+			/*[
+			  "title"=> "Button title",
+			  "openUrlAction"=> [
+				"url"=> "http://url redirect for button"
+				]
+			  ]
+			  */
+			]
+		  )
+	   );
+	  // Adding simple response (mandatory)
+	  array_push($messages, array(
+		 "type"=> "simple_response",
+		// "platform"=> "google",
+		 "textToSpeech"=> "This is your link: Please log into Dialog Codex to find out the details of your search."
+		)
+	  );
+	  $response=array(
+			  "source" => "Webhook for Dialog Codex",
+			  "speech" => "This is your link: Please log into Dialog Codex to find out the details of your search.",
+			  "messages" => $messages,
+			  "contextOut" => array()
+		  );
+	
+	
+	
+/*
 	$response = new \stdClass();
 	$response->textToSpeech = "This is your link: " . $linkAddr . "     Please log into Codex to find out the details of your search.";
 	$response->speech = "This is your link: " . $linkAddr . "     Please log into Codex to find out the details of your search.";
 	$response->displayText = "This is your link: " . $linkAddr . "     Please log into Codex to find out the details of your search.";
 	$response->url = "Link " . $linkAddr;
 	$response->source = "Webhook for Dialog Codex";
+*/
+	
 	echo json_encode($response);
 }
 else
