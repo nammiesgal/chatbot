@@ -94,7 +94,7 @@ if($method == 'POST'){
 	
 	//get response from resource
 	$clientResponse = curl_exec($client);
-	$items=[];
+	
 	$messages=[];
 	// Building Card
 	array_push($messages, array(
@@ -123,9 +123,8 @@ if($method == 'POST'){
 		)
 	  );
 	  
-	  array_push($items, $messages);
 	  $richResponse=[];
-	  array_push($richResponse, array("items" =>$items));
+	  array_push($richResponse, array("items" =>$messages));
 	  
 	  $response=array(
 			  "source" => "Webhook for Dialog Codex",
