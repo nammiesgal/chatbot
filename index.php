@@ -99,29 +99,28 @@ if($method == 'POST'){
 	// Building Card
 	array_push($messages, array(
 		"type"=> "basicCard",
-	//	"platform"=> "google",
 		"title"=> "Dialog Codex Search Link",
 		"subtitle"=> "card subtitle",
+		"formattedText"=> 'This is your link: Please log into Dialog Codex to find out the details of your search.',
 		"image"=>[
 		  "url"=>$linkAddr,
 		  "accessibility_text"=>'image-alt'
 		  ],
-		  "formattedText"=> 'This is your link: Please log into Dialog Codex to find out the details of your search.',
 		  "buttons"=> [
+		  /*
 			[
 			  "title"=> "Button title",
 			  "openUrlAction"=> [
 				"url"=> "http://url redirect for button"
 				]
 			  ]
-			  
+			*/  
 			]
 		  )
 	   );
 	  // Adding simple response (mandatory)
 	  array_push($messages, array(
 		 "type"=> "simpleResponse",
-		// "platform"=> "google",
 		 "textToSpeech"=> "This is your link: Please log into Dialog Codex to find out the details of your search."
 		)
 	  );
