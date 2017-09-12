@@ -98,7 +98,7 @@ if($method == 'POST'){
 	$messages=[];
 	// Building Card
 	array_push($messages, array(
-		"type"=> "basicCard",
+		"type"=> "basic_card",
 	//	"platform"=> "google",
 		"title"=> "Dialog Codex Search Link",
 	//	"subtitle"=> "card subtitle",
