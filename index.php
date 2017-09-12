@@ -123,12 +123,9 @@ if($method == 'POST'){
 		)
 	  );
 	  
-	  $richResponse=[];
-	  array_push($richResponse, array("items" =>$messages));
-	  
 	  $tempArray =array(
 		"expect_user_response" => "true",
-		"rich_response" => $richResponse
+		"rich_response" => array("items" =>$messages)
 	  );
 	  
 	  
