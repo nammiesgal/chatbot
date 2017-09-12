@@ -108,13 +108,13 @@ if($method == 'POST'){
 		  ],
 		  "formattedText"=> 'This is your link: Please log into Dialog Codex to find out the details of your search.',
 		  "buttons"=> [
-			/*[
+			[
 			  "title"=> "Button title",
 			  "openUrlAction"=> [
 				"url"=> "http://url redirect for button"
 				]
 			  ]
-			  */
+			  
 			]
 		  )
 	   );
