@@ -101,7 +101,7 @@ if($method == 'POST'){
 		"type"=> "basicCard",
 	//	"platform"=> "google",
 		"title"=> "Dialog Codex Search Link",
-	//	"subtitle"=> "card subtitle",
+		"subtitle"=> "card subtitle",
 		"image"=>[
 		  "url"=>$linkAddr,
 		  "accessibility_text"=>'image-alt'
