@@ -120,7 +120,7 @@ if($method == 'POST'){
 	   );
 	  // Adding simple response (mandatory)
 	  array_push($messages, array(
-		 "type"=> "simple_response",
+		 "type"=> "simpleResponse",
 		// "platform"=> "google",
 		 "textToSpeech"=> "This is your link: Please log into Dialog Codex to find out the details of your search."
 		)
