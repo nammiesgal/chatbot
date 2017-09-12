@@ -102,19 +102,19 @@ if($method == 'POST'){
 		"title"=> "Dialog Codex Search Link",
 		"subtitle"=> "card subtitle",
 		"formattedText"=> 'This is your link: Please log into Dialog Codex to find out the details of your search.',
+		/*
 		"image"=>[
 		  "url"=>$linkAddr,
 		  "accessibility_text"=>'image-alt'
 		  ],
+		  */
 		  "buttons"=> [
-		  /*
 			[
 			  "title"=> "Button title",
 			  "openUrlAction"=> [
-				"url"=> "http://url redirect for button"
+				"url"=> $linkAddr
 				]
-			  ]
-			*/  
+			  ] 
 			]
 		  )
 	   );
