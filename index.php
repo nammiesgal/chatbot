@@ -97,6 +97,14 @@ if($method == 'POST'){
 	
 	$messages=[];
 	// Building Card
+	
+	// Adding simple response (mandatory)
+	array_push($messages, array(
+		"type"=> "simpleResponse",
+		"textToSpeech"=> "This is your link: Please log into Dialog Codex to find out the details of your search."
+		)
+	  );
+	  
 	array_push($messages, array(
 		"type"=> "basicCard",
 		"title"=> "Dialog Codex Search Link",
@@ -116,15 +124,9 @@ if($method == 'POST'){
 			]
 		  )
 	   );
-	  // Adding simple response (mandatory)
-	  array_push($messages, array(
-		 "type"=> "simpleResponse",
-		 "textToSpeech"=> "This is your link: Please log into Dialog Codex to find out the details of your search."
-		)
-	  );
+	  
 	  
 	  $tempArray =array(
-		"expect_user_response" => "true",
 		"rich_response" => array("items" =>$messages)
 	  );
 	  
