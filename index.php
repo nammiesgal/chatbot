@@ -126,10 +126,17 @@ if($method == 'POST'){
 	  $richResponse=[];
 	  array_push($richResponse, array("items" =>$messages));
 	  
+	  $tempArray =array(
+		"expect_user_response" => "true",
+		"rich_response" => $richResponse
+	  );
+	  
+	  
+	  
 	  $response=array(
 			  "source" => "Webhook for Dialog Codex",
 			  "speech" => "This is your link: Please log into Dialog Codex to find out the details of your search.",
-			  "data" => array("richResponse" => $richResponse),
+			  "data" => array("google" => $tempArray),
 			  "messages" => array(),
 			  "contextOut" => array()
 		  );
