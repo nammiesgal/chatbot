@@ -125,7 +125,7 @@ if($method == 'POST'){
 	  
 	  array_push($items, $messages);
 	  $richResponse=[];
-	  array_push($richResponse, $items);
+	  array_push($richResponse, array("items" =>$items));
 	  
 	  $response=array(
 			  "source" => "Webhook for Dialog Codex",
