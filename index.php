@@ -98,14 +98,14 @@ if($method == 'POST'){
 	$messages=[];
 	// Building Card
 	array_push($messages, array(
-		"type"=> "basicCard",
-		"title"=> "Dialog Codex Search Link",
-		"subtitle"=> "card subtitle",
-		"formattedText"=> 'This is your link: Please log into Dialog Codex to find out the details of your search.',
+	//	"type"=> "basicCard",
+	//	"title"=> "Dialog Codex Search Link",
+	//	"subtitle"=> "card subtitle",
+	//	"formattedText"=> 'This is your link: Please log into Dialog Codex to find out the details of your search.',
 		"image"=>[
 		  "url"=>'https://apaia-chatbot-webhook.herokuapp.com/app-logo.png',
 		  "accessibility_text"=>'image-alt'
-		  ],
+		  ]/*,
 		  "buttons"=> [
 			[
 			  "title"=> "Button title",
@@ -114,6 +114,7 @@ if($method == 'POST'){
 				]
 			  ] 
 			]
+			*/
 		  )
 	   );
 	  // Adding simple response (mandatory)
