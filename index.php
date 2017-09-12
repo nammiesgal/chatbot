@@ -127,7 +127,8 @@ if($method == 'POST'){
 	  
 	  
 	  $tempArray =array(
-		"rich_response" => array("items" =>$messages)
+		"rich_response" => array("items" =>$messages,
+								 "suggestions" => array("title" => "Basic Card"))
 	  );
 	  
 	  
