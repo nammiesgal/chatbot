@@ -127,7 +127,7 @@ if($method == 'POST'){
 	  $response=array(
 			  "source" => "Webhook for Dialog Codex",
 			  "speech" => "This is your link: Please log into Dialog Codex to find out the details of your search.",
-			  "items" => $messages,
+			  "messages" => $messages,
 			  "contextOut" => array()
 		  );
 	
