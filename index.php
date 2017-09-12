@@ -102,12 +102,10 @@ if($method == 'POST'){
 		"title"=> "Dialog Codex Search Link",
 		"subtitle"=> "card subtitle",
 		"formattedText"=> 'This is your link: Please log into Dialog Codex to find out the details of your search.',
-		/*
 		"image"=>[
-		  "url"=>$linkAddr,
+		  "url"=>'https://apaia-chatbot-webhook.herokuapp.com/app-logo.png',
 		  "accessibility_text"=>'image-alt'
 		  ],
-		  */
 		  "buttons"=> [
 			[
 			  "title"=> "Button title",
