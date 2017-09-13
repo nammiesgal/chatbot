@@ -113,9 +113,8 @@ if($method == 'POST'){
 		"image_url"=>$linkAddr,
 		"buttons"=> [
 			[
-			  "title"=> "Click Here",	
-			  "type"=> "web_url",
-			  "url"=> $linkAddr
+			  "text"=> "Click Here",	
+			  "postback"=> $linkAddr
 			] 
 		]
 	
