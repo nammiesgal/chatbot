@@ -106,7 +106,7 @@ if($method == 'POST'){
 	  );
 	  
 	array_push($messages, array(
-		"type"=> 1,
+		"type"=> "basicCard",
 		"title"=> "Dialog Codex Search Link",
 		"subtitle"=> "card subtitle",
 		"formattedText"=> 'This is your link: Please log into Dialog Codex to find out the details of your search.',
