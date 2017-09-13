@@ -106,7 +106,7 @@ if($method == 'POST'){
 	  );
 	  
 	array_push($messages, array(
-		"type"=> "basicCard",
+		"type"=> "1",
 		"title"=> "Dialog Codex Search Link",
 	//	"subtitle"=> "card subtitle",
 		"formattedText"=> 'This is your link: Please log into Dialog Codex to find out the details of your search.',
@@ -126,18 +126,13 @@ if($method == 'POST'){
 	   );
 	  
 	  
-	  $tempArray =array(
-		"rich_response" => array("items" =>$messages,
-								 "suggestions" => array("title" => "Basic Card"))
-	  );
-	  
+	 
 	  
 	  
 	  $response=array(
 			  "source" => "Webhook for Dialog Codex",
 			  "speech" => "This is your link: Please log into Dialog Codex to find out the details of your search.",
-			  "data" =>  $tempArray,
-			  "messages" => array(),
+			  "messages" =>  $messages,
 			  "contextOut" => array()
 		  );
 	
