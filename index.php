@@ -109,11 +109,11 @@ if($method == 'POST'){
 		"type"=> 1,
 		"title"=> "Dialog Codex Search Link",
 		"subtitle"=> "This is your link: Please log into Dialog Codex to find out the details of your search.",
-		"formattedText"=> 'This is your link: Please log into Dialog Codex to find out the details of your search.',
-		"image_url"=>$linkAddr,
+		"formattedText"=> "This is your link: Please log into Dialog Codex to find out the details of your search.",
+		"url"=>$linkAddr,
 		"buttons"=> [
 			[
-			  "text"=> "Click Here",	
+			  "text"=> "Dialog Codex Click Here",	
 			  "postback"=> $linkAddr
 			] 
 		]
