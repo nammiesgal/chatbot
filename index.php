@@ -108,7 +108,7 @@ if($method == 'POST'){
 	array_push($messages, array(
 		"type"=> 1,
 		"title"=> "Dialog Codex Search Link",
-		"subtitle"=> "Please log into Dialog Codex to find out the details of your search.",
+		"subtitle"=> "Please log into Dialog Codex to find out the details of your search." . $linkAddr,
 		"formattedText"=> "Please log into Dialog Codex to find out the details of your search.",
 		"imageUrl"=> "https://apaia-chatbot-webhook.herokuapp.com/app-logo.png",
 		"default_action": {
