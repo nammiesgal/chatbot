@@ -106,14 +106,14 @@ if($method == 'POST'){
 	  );
 	  
 	array_push($messages, array(
-		"type"=> "basicCard",
+		"type"=> 1,
 		"title"=> "Dialog Codex Search Link",
 		"subtitle"=> "card subtitle",
 		"formattedText"=> 'This is your link: Please log into Dialog Codex to find out the details of your search.',
 		"buttons"=> [
 			[
 			  "text"=> "Button title",
-			  "postback"=> $linkAddr;
+			  "postback"=> $linkAddr
 			] 
 		]
 	
