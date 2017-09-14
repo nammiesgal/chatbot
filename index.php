@@ -96,7 +96,6 @@ if($method == 'POST'){
 	$clientResponse = curl_exec($client);
 	
 	$messages=[];
-	// Building Card
 	
 	// Adding simple response (mandatory)
 	array_push($messages, array(
@@ -105,42 +104,27 @@ if($method == 'POST'){
 		)
 	  );
   
-	
-  
+	// Building Card
 	array_push($messages, array(
 		"type"=> 1,
 		"title"=> "Dialog Codex Search Link",
 		"subtitle"=> "Please log into Dialog Codex to find out the details of your search.",
 		"formattedText"=> "Please log into Dialog Codex to find out the details of your search.",
-	//	"imageUrl"=> "https://apaia-chatbot-webhook.herokuapp.com/app-logo.png",
+		"imageUrl"=> "https://apaia-chatbot-webhook.herokuapp.com/app-logo.png",
 		"buttons"=> [
 			[
 			  "text"=> "Dialog Codex Click Here",	
-			  "postback"=> $linkAddr,
-			  "imageUrl"=> "https://apaia-chatbot-webhook.herokuapp.com/app-logo.png"
+			  "postback"=> $linkAddr
 			] 
 		]
 	));
 	  
-	 
-	  
-	  $response=array(
-			  "source" => "Webhook for Dialog Codex",
-			  "speech" => "This is your link: Please log into Dialog Codex to find out the details of your search.",
-			  "messages" =>  $messages,
-			  "contextOut" => array()
-		  );
-	
-	
-	
-/*
-	$response = new \stdClass();
-	$response->textToSpeech = "This is your link: " . $linkAddr . "     Please log into Codex to find out the details of your search.";
-	$response->speech = "This is your link: " . $linkAddr . "     Please log into Codex to find out the details of your search.";
-	$response->displayText = "This is your link: " . $linkAddr . "     Please log into Codex to find out the details of your search.";
-	$response->url = "Link " . $linkAddr;
-	$response->source = "Webhook for Dialog Codex";
-*/
+	$response=array(
+		"source" => "Webhook for Dialog Codex",
+		"speech" => "This is your link: Please log into Dialog Codex to find out the details of your search.",
+		"messages" =>  $messages,
+		"contextOut" => array()
+	);
 	
 	echo json_encode($response);
 }
