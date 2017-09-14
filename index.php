@@ -113,6 +113,11 @@ if($method == 'POST'){
 		"imageUrl"=> "https://apaia-chatbot-webhook.herokuapp.com/app-logo.png",
 		"buttons"=> [
 			[
+			  "type": "web_url",
+              "url": $linkAddr,
+              "title": "Watch video"
+			],
+			[
 			  "text"=> "Dialog Codex Click Here",	
 			  "postback"=> $linkAddr
 			] 
