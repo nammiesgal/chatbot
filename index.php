@@ -111,22 +111,18 @@ if($method == 'POST'){
 		"subtitle"=> "Please log into Dialog Codex to find out the details of your search.",
 		"formattedText"=> "Please log into Dialog Codex to find out the details of your search.",
 	//	"imageUrl"=> "https://apaia-chatbot-webhook.herokuapp.com/app-logo.png",
-		"imageUrl"=>[
-			"url"=> "https://apaia-chatbot-webhook.herokuapp.com/app-logo.png",
-			"accessibilityText"=> "Image alternate text"
-		],
 		"buttons"=> [
 			[
 			  "text"=> "Dialog Codex Click Here",	
 			  "postback"=> $linkAddr
 			] 
 		]
-		  )	  
-	   );
+	));
 	  
-	  
-	 
-	  
+	 array_push($messages, array(
+		"type"=> 3, 
+		"imageUrl"=> "https://apaia-chatbot-webhook.herokuapp.com/app-logo.png"
+	));  
 	  
 	  $response=array(
 			  "source" => "Webhook for Dialog Codex",
