@@ -104,20 +104,13 @@ if($method == 'POST'){
 		"textToSpeech"=> "This is your link: Please log into Dialog Codex to find out the details of your search."
 		)
 	  );
-	  
+/*	  
 	array_push($messages, array(
 		"type"=> 1,
 		"title"=> "Dialog Codex Search Link",
 		"subtitle"=> "Please log into Dialog Codex to find out the details of your search.",
 		"formattedText"=> "Please log into Dialog Codex to find out the details of your search.",
 		"imageUrl"=> "https://apaia-chatbot-webhook.herokuapp.com/app-logo.png",
-		"default_action": {
-              "type": "web_url",
-              "url": $linkAddr,
-              "messenger_extensions": true,
-              "webview_height_ratio": "tall",
-              "fallback_url": $linkAddr
-        },
 		"buttons"=> [
 			[
 			  "text"=> "Dialog Codex Click Here",	
@@ -127,7 +120,7 @@ if($method == 'POST'){
 		  )	  
 	   );
 	  
-	  
+*/	  
 	 
 	  
 	  
