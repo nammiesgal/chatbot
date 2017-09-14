@@ -105,11 +105,7 @@ if($method == 'POST'){
 		)
 	  );
   
-	array_push($messages, array(
-		"type"=> 3, 
-		"imageUrl"=> "https://apaia-chatbot-webhook.herokuapp.com/app-logo.png",
-		"postback"=> $linkAddr
-	)); 
+	
   
 	array_push($messages, array(
 		"type"=> 1,
@@ -120,7 +116,8 @@ if($method == 'POST'){
 		"buttons"=> [
 			[
 			  "text"=> "Dialog Codex Click Here",	
-			  "postback"=> $linkAddr
+			  "postback"=> $linkAddr,
+			  "imageUrl"=> "https://apaia-chatbot-webhook.herokuapp.com/app-logo.png"
 			] 
 		]
 	));
