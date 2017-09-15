@@ -100,7 +100,7 @@ if($method == 'POST'){
 	// Adding simple response (mandatory)
 	array_push($messages, array(
 		"type"=> 0,
-		"textToSpeech"=> "This is your link: Please log into Dialog Codex to find out the details of your search."
+		"speech"=> "This is your link: Please log into Dialog Codex to find out the details of your search."
 	));
   
 	// Building Card
@@ -111,7 +111,6 @@ if($method == 'POST'){
 		"formattedText"=> "Please log into Dialog Codex to find out the details of your search.",
 		"buttons"=> [
 			[
-			"imageUrl"=> "https://apaia-chatbot-webhook.herokuapp.com/app-logo.png",
 			  "text"=> "Dialog Codex Click Here",	
 			  "postback"=> $linkAddr
 			] 
@@ -120,12 +119,8 @@ if($method == 'POST'){
 	/*
 	array_push($messages, array(
 		"type"=> 3,
-		"imageUrl"=> "https://apaia-chatbot-webhook.herokuapp.com/app-logo.png",
-		"buttons"=> [
-			[
-			  "postback"=> $linkAddr
-			] 
-		]
+		"imageUrl"=> "https://apaia-chatbot-webhook.herokuapp.com/app-logo.png"
+		
 	));
   */
 	$response=array(
