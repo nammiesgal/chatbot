@@ -120,7 +120,7 @@ if($method == 'POST'){
 			] 
 		]
 	));
-*/	  
+  
 	$response=array(
 		"source" => "Webhook for Dialog Codex",
 		"speech" => "This is your link: Please log into Dialog Codex to find out the details of your search.",
@@ -128,7 +128,15 @@ if($method == 'POST'){
 		"textToSpeech"=> "This is your link: Please log into Dialog Codex to find out the details of your search.",
 		"contextOut" => array()
 	);
+*/	
 	
+ 	$response = new \stdClass();
+ 	$response->textToSpeech = "This is your link: " . $linkAddr . "     Please log into Codex to find out the details of your search.";
+ 	$response->speech = "This is your link: " . $linkAddr . "     Please log into Codex to find out the details of your search.";
+ 	$response->displayText = "This is your link: " . $linkAddr . "     Please log into Codex to find out the details of your search.";
+ 	$response->url = "Link " . $linkAddr;
+ 	$response->source = "Webhook for Dialog Codex";
+ 
 	echo json_encode($response);
 }
 else
