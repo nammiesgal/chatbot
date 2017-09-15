@@ -100,7 +100,7 @@ if($method == 'POST'){
 	// Adding simple response (mandatory)
 	array_push($messages, array(
 		"type"=> 0,
-		"speech"=> "This is your link: Please log into Dialog Codex to find out the details of your search."
+		"textToSpeech"=> "This is your link: Please log into Dialog Codex to find out the details of your search."
 	));
   
 	// Building Card
@@ -125,7 +125,7 @@ if($method == 'POST'){
   */
 	$response=array(
 		"source" => "Webhook for Dialog Codex",
-		"speech" => "This is your link: Please log into Dialog Codex to find out the details of your search.",
+		"textToSpeech" => "This is your link: Please log into Dialog Codex to find out the details of your search.",
 		"messages" =>  $messages,
 		"contextOut" => array()
 	);
