@@ -105,6 +105,7 @@ if($method == 'POST'){
 	  );
   
 	// Building Card
+/*	
 	array_push($messages, array(
 		"type"=> 1,
 		"title"=> "Dialog Codex Search Link",
@@ -119,7 +120,7 @@ if($method == 'POST'){
 			] 
 		]
 	));
-	  
+*/	  
 	$response=array(
 		"source" => "Webhook for Dialog Codex",
 		"speech" => "This is your link: Please log into Dialog Codex to find out the details of your search.",
