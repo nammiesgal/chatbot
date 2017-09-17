@@ -110,7 +110,7 @@ if($method == 'POST'){
 		"title"=> "Dialog Codex Search Link",
 		"subtitle"=> "Please log into Dialog Codex to find out the details of your search.",
 		"formattedText"=> "Please log into Dialog Codex to find out the details of your search.",
-		"textToSpeech"=> "This is your link: Please log into Dialog Codex to find out the details of your search.",
+	//	"textToSpeech"=> "This is your link: Please log into Dialog Codex to find out the details of your search.",
 		"imageUrl"=> "https://apaia-chatbot-webhook.herokuapp.com/app-logo.png",
 		
 		"buttons"=> [
@@ -128,17 +128,11 @@ if($method == 'POST'){
 	));
   */
   
-	$telegram = array(
-		"text"=>"*Title* Dialog Codex\n *Link*" . $linkAddr,
-		"parse_mode"=>"Markdown"
-	);
-	
 	$response=array(
 		"source" => "Webhook for Dialog Codex",
 		"speech" => "This is your link: Please log into Dialog Codex to find out the details of your search.",
 		"messages" =>  $messages,
 		"displayText" => "This is your link: Please log into Dialog Codex to find out the details of your search.",
-		"data"=> array("Telegram"=>$telegram),
 		"contextOut" => array()
 	);
 	
