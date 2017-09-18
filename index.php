@@ -120,14 +120,28 @@ if($method == 'POST'){
 			] 
 		]
 	));
-	/*
-	array_push($messages, array(
-		"type"=> 3,
-		"imageUrl"=> "https://apaia-chatbot-webhook.herokuapp.com/app-logo.png"
-		
-	));
-  */
-  
+	
+	//build sms messages
+	$fromNumber = "+61436414915";
+	$toNumber = "+61400113044";
+	$msg = "Here is your Dialog Codex search link: " . $linkAddr;
+	$arrayResp = array();
+	
+	require("./twilio-php-master/Twilio/autoload.php");
+	use Twilio\Rest\Client;
+	
+	$accountSid = "AC08d095cb250390a8bb04bf5c36e749a6";
+	$authToken = "53b7781098b8f71fb1dba914b5c9b5ad";
+	$client = new Client($sid, $token);
+	
+	$client->messages->create(
+		$toNumber,
+		array(
+			'from' => $fromNumber,
+			'body' => $msg
+		)
+	);
+	
 	$response=array(
 		"source" => "Webhook for Dialog Codex",
 		"speech" => "This is your link: Please log into Dialog Codex to find out the details of your search.",
