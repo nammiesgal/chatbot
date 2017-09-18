@@ -127,7 +127,7 @@ if($method == 'POST'){
 	$msg = "Here is your Dialog Codex search link: " . $linkAddr;
 	$arrayResp = array();
 	
-	require("./twilio-php-master/Twilio/autoload.php");
+	require_once(__DIR__ . '/twilio-php-master/Twilio/autoload.php');
 	use Twilio\Rest\Client;
 	
 	$accountSid = "AC08d095cb250390a8bb04bf5c36e749a6";
