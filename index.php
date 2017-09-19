@@ -17,8 +17,6 @@ if($method == 'POST'){
 	
 	$linkAddr = "https://codex.dialoggroup.biz/?mode=voice";
 	
-	//&name=pete+ryan&company=dialog&office=south+brisbane&manager=alec+begley&search=.net-python-project+management
-	
 	// only process when consultant contains a value
 	if (!(is_null($consultantNameValue) || empty($consultantNameValue)) )
 	{
@@ -104,7 +102,6 @@ if($method == 'POST'){
 		"subtitle"=> "Please log into Dialog Codex to find out the details of your search.",
 		"formattedText"=> "Please log into Dialog Codex to find out the details of your search.",
 		"imageUrl"=> "https://apaia-chatbot-webhook.herokuapp.com/app-logo.png",
-		
 		"buttons"=> [
 			[
 			  "text"=> "Dialog Codex Click Here",	
@@ -126,6 +123,6 @@ if($method == 'POST'){
 else
 {
 	echo "Method not allowed";
+	
 }
-
 ?>
