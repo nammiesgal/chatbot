@@ -97,13 +97,6 @@ if($method == 'POST'){
 	
 	$messages=[];
 	
-	// Adding simple response (mandatory)
-	
-	array_push($messages, array(
-		"type"=> 0,
-		"textToSpeech"=> "This is your link: Please log into Dialog Codex to find out the details of your search."
-	));
-  
 	// Building Card
 	array_push($messages, array(
 		"type"=> 1,
