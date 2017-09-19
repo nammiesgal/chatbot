@@ -101,7 +101,7 @@ if($method == 'POST'){
 	
 	array_push($messages, array(
 		"type"=> 0,
-		"speech"=> "This is your link: Please log into Dialog Codex to find out the details of your search."
+		"textToSpeech"=> "This is your link: Please log into Dialog Codex to find out the details of your search."
 	));
   
 	// Building Card
