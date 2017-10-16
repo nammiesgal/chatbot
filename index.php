@@ -21,7 +21,7 @@ if($method == 'POST'){
 		//if spaces, replace with +
 		if (preg_match('/\s/',$consultantNameValue)) 
 		{
-			$consultantNameValue = preg_replace('/\s+/', '+', $consultantNameValue);
+			$consultantNameValue = preg_replace('/\s+/', ' ', $consultantNameValue);
 		}
 		$searchQuery .= "&name=" . rawurlencode(strtoupper($consultantNameValue));
 	}
@@ -42,7 +42,7 @@ if($method == 'POST'){
 			//if spaces, replace with +
 			if (preg_match('/\s/',$value)) 
 			{
-				$newLocatValue[] = preg_replace('/\s+/', '+', $value);
+				$newLocatValue[] = preg_replace('/\s+/', ' ', $value);
 			}
 			else 
 			{
@@ -58,7 +58,7 @@ if($method == 'POST'){
 		//if spaces, replace with +
 		if (preg_match('/\s/',$managerNameValue)) 
 		{
-			$managerNameValue = preg_replace('/\s+/', '+', $managerNameValue);
+			$managerNameValue = preg_replace('/\s+/', ' ', $managerNameValue);
 		}
 		$searchQuery .= "&manager=" . rawurlencode(strtoupper($managerNameValue));
 	}
@@ -72,7 +72,7 @@ if($method == 'POST'){
 			//if spaces, replace with +
 			if (preg_match('/\s/',$value)) 
 			{
-				$newSearchValue[] = preg_replace('/\s+/', '+', $value);
+				$newSearchValue[] = preg_replace('/\s+/', ' ', $value);
 			}
 			else 
 			{
