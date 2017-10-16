@@ -68,7 +68,6 @@ if($method == 'POST'){
 	// only process when search contains a value
 	if (!(is_null($searchValue) || empty($searchValue)) )
 	{
-		$linkAddr .= "&search=";
 		$newSearchValue = array();
 		foreach( $searchValue as $value ) {
 		
