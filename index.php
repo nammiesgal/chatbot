@@ -15,7 +15,7 @@ if($method == 'POST'){
 	$consultantNameValue = $json->result->parameters->consultantName;
 	$managerNameValue = $json->result->parameters->managerName;
 	
-	$linkAddr = "https://codex.dialoggroup.biz/?mode=voice";
+	$linkAddr = "https://codex.dialoggroup.biz/voice?";
 	
 	// only process when consultant contains a value
 	if (!(is_null($consultantNameValue) || empty($consultantNameValue)) )
@@ -25,14 +25,14 @@ if($method == 'POST'){
 		{
 			$consultantNameValue = preg_replace('/\s+/', '+', $consultantNameValue);
 		}
-		$linkAddr .= rawurlencode("&name=" . $consultantNameValue);
+		$linkAddr .= "&name=" . rawurlencode(strtoupper($consultantNameValue));
 	}
 	
 	// only process when company contains a value
 	if (!(is_null($companyValue) || empty($companyValue)) )
 		
 	{
-		$linkAddr .= rawurlencode("&company=" . $companyValue);
+		$linkAddr .= "&company=" . rawurlencode(strtoupper($companyValue));
 	}
 		
 	// only process when office location contains a value
@@ -51,7 +51,7 @@ if($method == 'POST'){
 				$newLocatValue[] = $value;
 			}
 		}
-		$linkAddr .= rawurlencode("&office=" . implode($newLocatValue, "-"));
+		$linkAddr .= "&office=" . rawurlencode(strtoupper(implode($newLocatValue, "-")));
 	}
 	
 	// only process when manager contains a value
@@ -62,7 +62,7 @@ if($method == 'POST'){
 		{
 			$managerNameValue = preg_replace('/\s+/', '+', $managerNameValue);
 		}
-		$linkAddr .= rawurlencode("&manager=" . $managerNameValue);
+		$linkAddr .= "&manager=" . rawurlencode(strtoupper($managerNameValue));
 	}
 	
 	// only process when search contains a value
@@ -81,7 +81,7 @@ if($method == 'POST'){
 					$newSearchValue[] = $value;
 			}
 		}
-		$linkAddr .= rawurlencode("&search=" . implode($newSearchValue, "-"));
+		$linkAddr .= "&search=" . rawurlencode(strtoupper(implode($newSearchValue, "-")));
 	}
 	
 	//consume the link
