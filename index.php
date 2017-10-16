@@ -25,20 +25,19 @@ if($method == 'POST'){
 		{
 			$consultantNameValue = preg_replace('/\s+/', '+', $consultantNameValue);
 		}
-		$linkAddr .= "&name=" . $consultantNameValue;
+		$linkAddr .= rawurlencode("&name=" . $consultantNameValue);
 	}
 	
 	// only process when company contains a value
 	if (!(is_null($companyValue) || empty($companyValue)) )
 		
 	{
-		$linkAddr .= "&company=" . $companyValue;
+		$linkAddr .= rawurlencode("&company=" . $companyValue);
 	}
 		
 	// only process when office location contains a value
 	if (!(is_null($officeLocationValue) || empty($officeLocationValue)) )
 	{
-		$linkAddr .= "&office=";
 		$newLocatValue = array();
 		foreach( $officeLocationValue as $value ) {
 		
@@ -52,7 +51,7 @@ if($method == 'POST'){
 				$newLocatValue[] = $value;
 			}
 		}
-		$linkAddr .= implode($newLocatValue, "-");
+		$linkAddr .= rawurlencode("&office=" . implode($newLocatValue, "-"));
 	}
 	
 	// only process when manager contains a value
@@ -63,7 +62,7 @@ if($method == 'POST'){
 		{
 			$managerNameValue = preg_replace('/\s+/', '+', $managerNameValue);
 		}
-		$linkAddr .= "&manager=" . $managerNameValue;
+		$linkAddr .= rawurlencode("&manager=" . $managerNameValue);
 	}
 	
 	// only process when search contains a value
@@ -83,7 +82,7 @@ if($method == 'POST'){
 					$newSearchValue[] = $value;
 			}
 		}
-		$linkAddr .= implode($newSearchValue, "-");
+		$linkAddr .= rawurlencode("&search=" . implode($newSearchValue, "-"));
 	}
 	
 	//consume the link
