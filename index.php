@@ -116,7 +116,7 @@ if($method == 'POST'){
 		"contextOut" => array()
 	);
 	
-	$ret = exec("node launchBrowser.js " . $linkAddr . " 2>&1", $out, $err);
+	$ret = exec("node launchBrowser.js 2>&1", $out, $err);
 	
 	echo json_encode($response);
 }
