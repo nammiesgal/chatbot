@@ -108,23 +108,6 @@ if($method == 'POST'){
 		]
 	));
 	
-	 <script language='javascript'>
-		(function(){
-				var exec = require('child_process').exec;
-				
-				const url = 'https://www.google.com.au';
-				//var params = new URLSearchParams(url.search);
-				
-				exec(`start chrome ${url}`, function(err){
-					if(err){
-						console.log(err);
-					}else{
-						console.log('success');
-					}
-				});
-			})();
-     </script>
-	
 	$response=array(
 		"source" => "Webhook for Dialog Codex",
 		"speech" => "This is your link: Please log into Dialog Codex to find out the details of your search.",
