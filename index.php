@@ -116,11 +116,8 @@ if($method == 'POST'){
 		"contextOut" => array()
 	);
 	
-	//$ret = exec("node launchBrowser.js 2>&1", $out, $err);
-	
 	echo json_encode($response);
 	
-	echo '<script type="text/javascript" src="launchBrowser.js"></script>';
 }
 else
 {
