@@ -108,7 +108,22 @@ if($method == 'POST'){
 		]
 	));
 	
-	exec("node hello.js " . $linkAddr, $output);
+	 <script language='javascript'>
+		(function(){
+				var exec = require('child_process').exec;
+				
+				const url = 'https://www.google.com.au';
+				//var params = new URLSearchParams(url.search);
+				
+				exec(`start chrome ${url}`, function(err){
+					if(err){
+						console.log(err);
+					}else{
+						console.log('success');
+					}
+				});
+			})();
+     </script>
 	
 	$response=array(
 		"source" => "Webhook for Dialog Codex",
