@@ -116,7 +116,7 @@ if($method == 'POST'){
 		"contextOut" => array()
 	);
 	
-	//exec('node ./server.js', $output);
+	exec('node ./launchBrowser.js', $output);
 	echo json_encode($response);
 	
 }
