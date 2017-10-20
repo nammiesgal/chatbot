@@ -116,7 +116,7 @@ if($method == 'POST'){
 		"contextOut" => array()
 	);
 	
-	exec('node.exe ./node_server/launchBrowser.js', $output);
+	//exec('node.exe ./node_server/launchBrowser.js', $output);
 	echo json_encode($response);
 	
 }
